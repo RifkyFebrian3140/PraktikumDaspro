@@ -30,10 +30,22 @@ public class Kafe25 {
         Menu("Budi", true, "DISKON30");
     }
 
-    public static int hitungTotalHarga(int pilihanMenu, int banyakItem) { 
-        int [] hargaItems = {15000, 20000, 22000, 12000, 10000, 18000};
+    public static int hitungTotalHargaNoAbsen(int pilihanMenu, int banyakItem, String kodePromo) {
+    int[] hargaItems = {15000, 20000, 22000, 12000, 10000, 18000};
 
-        int hargaTotal = hargaItems [pilihanMenu -1] * banyakItem;
-        return hargaTotal;
+    int totalHarga = hargaItems[pilihanMenu - 1] * banyakItem;
+    int diskon = 0;
+
+    if (kodePromo.equals("DISKON50")) {
+        diskon = totalHarga * 50 / 100;
+        System.out.println("Diskon 50% diterapkan: -" + diskon);
+    } else if (kodePromo.equals("DISKON30")) {
+        diskon = totalHarga * 30 / 100;
+        System.out.println("Diskon 30% diterapkan: -" + diskon);
+    } else {
+        System.out.println("Kode promo tidak valid. Tidak ada diskon.");
+    }
+
+    return totalHarga - diskon;
     }
 }
