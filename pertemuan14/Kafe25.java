@@ -27,8 +27,22 @@ public class Kafe25 {
         System.out.println("Silakan pilih menu yang Anda inginkan.");
     }
     public static void main(String[] args) {
-        Menu("Budi", true, "DISKON30");
+
+    int[] daftarMenu = {1, 3, 5};
+    int[] jumlahItem = {2, 1, 4};
+
+    String kodePromo = "DISKON30";
+
+    int totalKeseluruhan = 0;
+
+    for (int i = 0; i < daftarMenu.length; i++) {
+        int totalPerMenu = hitungTotalHargaNoAbsen(daftarMenu[i], jumlahItem[i], kodePromo);
+        totalKeseluruhan += totalPerMenu;
     }
+
+    System.out.println("----------------------------");
+    System.out.println("Total Keseluruhan: Rp " + totalKeseluruhan);
+}
 
     public static int hitungTotalHargaNoAbsen(int pilihanMenu, int banyakItem, String kodePromo) {
     int[] hargaItems = {15000, 20000, 22000, 12000, 10000, 18000};
