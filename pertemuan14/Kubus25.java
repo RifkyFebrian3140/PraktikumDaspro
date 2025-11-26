@@ -20,10 +20,10 @@ public static void main(String[] args) {
     sisi = input.nextInt();
 
     vol = hitungVolume(sisi);
-    System.out.println("Volume kubus adalah" + vol);
+    System.out.println("Volume kubus adalah " + vol);
 
     luasPermukaan = hitungLuarPermukaan(sisi);
-    System.out.println("Luas permukaan kubus adalah" + luasPermukaan);
+    System.out.println("Luas permukaan kubus adalah " + luasPermukaan);
 
     input.close();
     }
