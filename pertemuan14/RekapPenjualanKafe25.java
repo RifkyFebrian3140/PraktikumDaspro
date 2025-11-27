@@ -69,7 +69,6 @@ public class RekapPenjualanKafe25 {
 
     public static void main(String[] args) {
 
-        // 5 menu × 7 hari (ukuran tetap)
         int[][] penjualan = new int[5][7];
 
         inputPenjualan(penjualan);
