@@ -31,7 +31,7 @@ public class Kafe25 {
     int[] daftarMenu = {1, 3, 5};
     int[] jumlahItem = {2, 1, 4};
 
-    String kodePromo = "DISKON30";
+    String kodePromo = "DISKON50";
 
     int totalKeseluruhan = 0;
 
